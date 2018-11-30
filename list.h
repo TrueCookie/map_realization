@@ -12,7 +12,7 @@ public:
 	list() {
 		head = nullptr;
 		tail = head;
-		std::cout << "list ctor";
+		//std::cout << "list ctor";
 	}
 	bool is_empty();
 	void reverse();

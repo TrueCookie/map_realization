@@ -1,13 +1,15 @@
 #pragma once
 #include <string>
-#include "list.cpp"
+#include "list.h"
 
 class map {
 private:
-	const int N = 256;
-	list** table = new list*[N];	//how to call list constructor 
+	int N;
+	list** table;	//how to call list constructor 
 public:	
 	map() {
+		N = 256;
+		table = new list*[N];
 	}
 	void put(int, std::string);
 	std::string get(int);
