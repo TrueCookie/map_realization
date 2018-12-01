@@ -1,4 +1,4 @@
-#pragma once
+//#pragma once
 #include <string>
 #include "collection.h"
 #include "data.h"
@@ -12,7 +12,6 @@ public:
 	list() {
 		head = nullptr;
 		tail = head;
-		//std::cout << "list ctor";
 	}
 	bool is_empty();
 	void reverse();

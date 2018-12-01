@@ -1,5 +1,5 @@
-#pragma once
-#include <string>
+//#pragma once
+//#include <string>
 #include "list.h"
 
 class map {
@@ -10,6 +10,9 @@ public:
 	map() {
 		N = 256;
 		table = new list*[N];
+	}
+	~map() {
+		delete[] table;
 	}
 	void put(int, std::string);
 	std::string get(int);
