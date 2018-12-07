@@ -18,8 +18,8 @@ public:
 	size_t size();
 
 	void read();
-	void push_back(int, std::string);
-	void push_front(int, std::string);
+	void push_back(data*);
+	void push_front(data*);
 	data* find(int);
 	int remove(int);
 

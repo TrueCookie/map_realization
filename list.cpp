@@ -1,35 +1,29 @@
 #include <iostream>
 #include "list.h"
 
-void list::push_back(int ikey, std::string ivalue) {
-	data* nData = new data;
-	nData->key = ikey;
-	nData->value = ivalue;
+void list::push_back(data* cell) {
 	if (this->is_empty()) {
-		head = nData;
+		head = cell;
 		tail = new data;
 	}
 	else {
-		tail->prev->next = nData;
+		tail->prev->next = cell;
 	}
-	tail->prev = nData;
-	nData->next = tail;
+	tail->prev = cell;
+	cell->next = tail;
 }
 
-void list::push_front(int ikey, std::string ivalue) {
-	data* nData = new data;
-	nData->key = ikey;
-	nData->value = ivalue;
+void list::push_front(data* cell) {
 	if (this->is_empty()) {
 		tail = new data;
-		tail->prev = nData;
-		nData->next = tail;
+		tail->prev = cell;
+		cell->next = tail;
 	}
 	else {
-		head->prev = nData;
-		nData->next = head;
+		head->prev = cell;
+		cell->next = head;
 	}
-	head = nData;
+	head = cell;
 }
 
 void list::read() {
@@ -76,7 +70,6 @@ int list::remove(int key) {
 	if (p_key != tail) {
 		p_key->prev->next = p_key->next;
 		p_key->next->prev = p_key->prev;
-		//delete p_key;
 	}else {
 		std::cout << "Value has not been found" << std::endl;
 	}return p_key->key;
