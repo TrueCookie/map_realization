@@ -1,6 +1,4 @@
-//#pragma once
 #include <iostream>
-//#include <string>
 #include "list.h"
 
 void list::push_back(int ikey, std::string ivalue) {

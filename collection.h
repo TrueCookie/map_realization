@@ -8,3 +8,4 @@ protected:
 	virtual size_t size() = 0;
 	virtual void reverse() = 0;
 };
+

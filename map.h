@@ -5,14 +5,11 @@
 class map {
 private:
 	int N;
-	list** table;	//how to call list constructor 
+	list* table;
 public:	
-	map() {
-		N = 256;
-		table = new list*[N];
-	}
+	map(): N(256), table(new list[N]) {}
 	~map() {
-		delete[] table;
+		delete [] table;
 	}
 	void put(int, std::string);
 	std::string get(int);
@@ -20,5 +17,3 @@ public:
 	int hash(int);
 	int dig_sum(int num);
 };
-
-

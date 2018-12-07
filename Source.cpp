@@ -1,4 +1,4 @@
-//#include <string>
+#include <conio.h>
 #include <iostream>
 #include "map.h"
 
@@ -11,6 +11,7 @@ int main() {
 
 	std::cout << m_map.get(k1);
 
+	_getch();
 	return 0;
 }
 
